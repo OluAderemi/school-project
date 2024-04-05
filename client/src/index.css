@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700;800&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.primary-title {
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+}
+
+.primary-button {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(100deg, rgb(43, 163, 25),rgb(48, 254, 165));
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover {
+    background: linear-gradient(260deg, rgb(89, 255, 64),rgb(48, 254, 165));
+}
+
+.secondary-button {
+    color: rgb(121, 119, 119);
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px rgb(121, 119, 119);
+    margin: 6px;
+}
+
+.secondary-button:hover {
+    color: rgb(48, 48, 48);
+    border: solid 2px rgb(48, 48, 48);
+}
+
+
+/*-------- Navbar --------*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-button {
+    color: rgb(37, 170, 16);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
+nav .nav-button:disabled {
+    background-color: rgb(181, 180, 180);
+    color: rgb(189, 42, 90);
+}
+
+nav .logo-container {
+    width: 170px;
+    margin: 15px;
+}
+
+nav .logo-container .logo {
+    width: 100%;
+}
+
+/*-------- Home page --------*/
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ), url('images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+.home {
+    margin-top: 30vh;
+}
+
+/*-------- Auth Modal --------*/
+.auth-modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.auth-modal .close-icon {
+    float: right;
+    cursor: pointer;
+}
+
+.auth-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+    padding: 8px;
+    margin: 8px;
+    font-size: 17px;
+}
+
+/*-------- OnBoarding Page --------*/
+.onboarding {
+    border-top: solid 1px rgb(213, 213, 213);
+}
+
+.onboarding form {
+    display: flex;
+    justify-content: center;
+}
+
+.onboarding form section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 35%;
+    text-align: start;
+}
+
+
+.onboarding form span {
+    /* padding-top: 20px; */
+    break-inside: avoid;
+    margin-bottom: 10000px;
+}
+.onboarding form input {
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+
+.onboarding form input[type=number] {
+    width: 40px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.onboarding form label {
+    margin-bottom: 5px;
+}
+
+.onboarding form .personalization .radio-label {
+    margin-bottom: 22px;
+    margin-top: 22px;
+}
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=radio] {
+    display: none;
+}
+
+.onboarding form input[type=radio]:checked + label {
+    border: solid 2px rgb(37, 170, 16);
+}
+
+.onboarding form input[type=submit]:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.onboarding form input[type=submit]:active {
+    background-color: rgb(95, 154, 86);
+}
+
+/* .onboarding form .photo-container img {
+    width: 100%
+} */
+
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .photo-container {
+    position: relative;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+
+
+
+
+.onboarding form .personal-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+.onboarding form .personalization {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.onboarding form input[type=checkbox] {
+    align-self: start;
+    height: 20px;
+    width: 20px;
+}
+
+
+.onboarding form .personalization .personalization-heading-label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.onboarding form .personalization .personalization-label{
+    padding: 15px 30px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    height: min-content;
+}
+
+
+.onboarding form .location .distance-label{
+    padding: 15px 30px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    height: min-content;
+}
+
+
+#min_age, #max_age{
+    width: 40px;
+    padding: 15px 30px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+.onboarding form .location {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.onboarding form .location input[type="text"]{
+    width: 150px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.onboarding form .location input[type="number"]{
+    width: 80px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+.onboarding form .user-interests {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.user-interests-header{
+    margin-bottom: 10px;
+}
+
+.interest-box {
+    padding: 15px 30px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.interest-box.selected {
+    background-color: rgb(37, 170, 16);
+}
+
+
+
+
+
+
+.onboarding form .about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+.error {
+    border-color: red !important;
+}
+
+.error-text {
+    color: red;
+    margin-top: 5px;
+}
+
+.onboarding form input[type="number"].error {
+    border-color: red;
+}
+
+.onboarding form input[type="number"] + .error-text {
+    color: red;
+    margin-top: 5px;
+}
+
+
+.interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.radios-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+
+.distance-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+/* Style for fieldset */
+.fieldset {
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 20px; /* Add margin to separate from other elements */
+}
+
+/* Style for legend */
+.legend {
+    font-size: 18px; /* Larger font size for legend */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Add some space between legend and select */
+}
+
+/* Style for select element */
+.select {
+    width: 100%; /* Full width */
+    padding: 8px; /* Add padding */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width */
+}
+
+/* .onboarding form .multiple-input-container input {
+    margin: 15px 10px;
+} */
+
+/* .onboarding form .multiple-input-container label {
+    padding: 15px 30px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+} */
+
+
+
+
+/* .onboarding form .multiple-input-container input[type=number] {
+    height: max-content;
+    width: 3%;
+} */
+
+/* .onboarding form .multiple-input-container ::placeholder{
+    text-align: center;
+} */
+
+
+
+
+
+
+
+/*-------- Dashboard  --------*/
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swipe {
+    position: absolute;
+}
+
+.dashboard .card-container {
+    width: 400px;
+    height: 650px;
+}
+
+.card {
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.dashboard .swipe-info {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+/*-------- Chat Container --------*/
+.chat-container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+}
+
+.chat-container .chat-container-header {
+    background: linear-gradient(45deg, rgb(43, 163, 25),rgb(48, 254, 165));
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container .option {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 4px rgb(43, 163, 25);
+    font-size: 20px;
+    margin: 2px;
+    padding: 10px;
+}
+
+.chat-container .option:disabled {
+    border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.chat-container .profile,
+.chat-container .log-out-icon {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.img-container {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+/*-------- Chat Display --------*/
+.chat-display,
+.matches-display {
+    padding: 20px;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+/*-------- Chat Input --------*/
+.chat-input {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
